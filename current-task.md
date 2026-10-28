@@ -31,6 +31,11 @@
 
 仅个人 Mac 使用，无账号/服务器/同步。固定两个阵营。用户数据与安装包分离，头像缩放到长边 1600，原始绘图需另存。备份格式 v1，解压内容上限 256 MB。旧头像暂保留以支持恢复；大库性能未测。继承 Electron 的 macOS 13 最低版本；未进行 Apple Developer ID 公证，不声称跨平台验证。
 
-## 交付下一步
+## 已交付
 
-检查最终提交范围，提交并推送 `origin/main`，将 arm64 zip 发布到本仓库 Release，验证远程文件与本机一致后更新交付状态。不扩展到其他仓库或后台任务。
+- 应用源码提交 `e5eaa93e2485dae5bc4abd545ae6a4f876783cf1` 已推送 `origin/main`，远端查询确认一致。
+- [v1.0.0 Release](https://github.com/NicholasZhao-zhenglin/repo/releases/tag/v1.0.0) 已正式发布，包含 macOS arm64 zip 与 `SHA256SUMS.txt`，非草稿。
+- 安装包 120,153,640 字节；GitHub 返回的 SHA-256 与本机一致：`fbf30c8fb292d2701722e34a31c0e2519b468ac2c784ac42de124cd87ab06f2f`。
+- ZIP 完整性检查通过；交付目录含可直接运行的 `异闻档案.app`、zip、校验文件和界面预览。
+- 已通过正常 macOS 启动方式打开正式 App，查看到空角色库首页，供用户开始创建自己的角色。
+- 后续只按用户反馈维护；当前无必做功能遗留，不扩展其他仓库或后台任务。

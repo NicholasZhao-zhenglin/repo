@@ -11,6 +11,9 @@
 | `node scripts/package.mjs`（指定官方 zip 缓存） | 退出 0 | 生成 arm64 app 和 zip；官方 zip SHA-256 与安装包提供的校验表一致 |
 | `codesign --verify --deep --strict` | 退出 0 | 本地临时签名可验证；不代表 Developer ID 公证 |
 | 截图检查 | 已查看 | 空态、编辑器、详情、阵营列表及最小窗口；未发现遮挡主要操作或横向溢出 |
+| `unzip -t -qq` | 退出 0 | 最终 zip 内部完整性检查 |
+| 正常 macOS 启动 + 原生窗口截图 | 通过 | 交付目录中的 app 显示正式空库首页 |
+| GitHub Release API 复核 | 已发布 | v1.0.0 非草稿，安装包 120,153,640 字节，远端 SHA-256 与本机一致 |
 
 桌面验收的合成角色、合成 PNG 与数据目录由测试创建并删除；没有读取或写入正式用户库。截图见测试输出（被 Git 忽略），无用户信息的首页截图保存为 `docs/screenshots/home.png`。
 

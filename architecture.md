@@ -32,6 +32,6 @@
 
 ## 交付边界
 
-打包只带 `dist`、`dist-electron` 和最小 package.json，封装为 asar，不包含源码、fixture 或用户数据。当前仅交付 macOS arm64；签名为本机 ad-hoc，未做 Developer ID 公证。
+应用 asar 包含 `dist`、`dist-electron`、最小 package.json 与第三方许可说明，不包含源码、fixture 或用户数据。当前仅交付 macOS arm64；签名为本机 ad-hoc，未做 Developer ID 公证。
 
 未实施且不属本轮范围：云同步、多用户、其他平台、阵营编辑、原始高清图片仓库及大规模容量优化。详见 [工程资料](docs/architecture-review/01-system-architecture.md)。
