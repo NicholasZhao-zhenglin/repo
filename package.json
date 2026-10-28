@@ -1,0 +1,35 @@
+{
+  "name": "oc-archive",
+  "productName": "异闻档案",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "只属于你的 OC 角色档案馆。完全离线的 macOS 桌面应用。",
+  "main": "dist-electron/main.cjs",
+  "author": "NicholasZhao-zhenglin",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "npm run build && electron .",
+    "build": "tsc --noEmit && vite build && node scripts/build.mjs",
+    "test": "tsx --test tests/store.test.ts",
+    "test:e2e": "npm run build && playwright test",
+    "package": "npm run build && node scripts/package.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "1.63.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "electron": "45.1.0",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}
